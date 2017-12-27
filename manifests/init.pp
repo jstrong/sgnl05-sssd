@@ -109,6 +109,8 @@ class sssd (
     }
   )
 
+  notify { "extra_packages: $extra_packages": }
+
   if $extra_packages {
     ensure_packages($extra_packages,
       {
